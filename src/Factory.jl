@@ -1,8 +1,9 @@
+include("Types.jl")
 
-# ===== PRIVATE METHODS BELOW HERE =================================================================================== #
-# TODO: Put private helper methods here. Don't forget to use the _ naming convention, and to add basic documentation.
-# ===== PRIVATE METHODS ABOVE HERE =================================================================================== #
 
-# ===== PUBLIC METHODS BELOW HERE =================================================================================== #
-# TODO: Make a build method to construct MyPuzzleRecordModel types
-# ===== PUBLIC METHODS ABOVE HERE =================================================================================== #
+function build(record::String)::MyPuzzleRecordModel
+    characters = collect(Char, record)
+    len = length(record)
+    return MyPuzzleRecordModel(record, characters, len)
+    #written
+end
